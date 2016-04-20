@@ -14,3 +14,5 @@ to execute unit tests run
 
     karma start
 
+## Demo
+A live demo is available at http://paulparton.com/agriwords/word-search/app/
