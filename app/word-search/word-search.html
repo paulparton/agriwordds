@@ -1,0 +1,58 @@
+
+<div class="row" style="background-color:#eee;">
+    
+    <!-- Left column -->
+    <div class="col-xs-12 col-sm-6">
+        
+        <div class="row">
+            
+            <div class="col-xs-12">
+                <h3>Letter Grid</h3>
+                <letter-grid grid-data="$ctrl.gridData"></letter-grid>
+                
+            </div>
+            
+        </div>
+
+        <div class="row">
+            
+            <div class="col-xs-12">
+                
+                <word-search-input search-list="$ctrl.searchList"></word-search-input>
+
+                
+            </div>
+            
+        </div>
+
+        <div class="row">
+            
+            <div class="col-xs-12">
+                
+                <h3>Search List</h3>
+                
+                <word-search-list search-list="$ctrl.searchList"></word-search-list>
+                
+                <button class="btn btn-xl btn-primary btn-solution" ng-click="$ctrl.solve($ctrl.gridData, $ctrl.searchList)">Solve!</button>
+                                
+            </div>
+            
+        </div>                
+        
+    </div>
+    
+    <!-- Right column -->
+    <div class="col-xs-12 col-sm-6">
+
+        <h3>Results</h3><a id="results"></a>
+        <solution result-list="$ctrl.resultList"></solution>
+        
+        
+        <!--
+        <pre>{{$ctrl.resultList | json}}</pre>
+        <h3>Grid data</h3>
+        <pre>{{$ctrl.gridData | json}}</pre>
+        -->
+    </div>
+    
+</div>

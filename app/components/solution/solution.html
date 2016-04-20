@@ -1,0 +1,32 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>Word</th>
+            <th>Start</th>
+            <th>End</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="result in $ctrl.resultList">
+            <td>{{result.word}}</td>
+            <td>
+                <span ng-if="result.direction">
+                     ({{result.startCol + 1}}), ({{result.startRow + 1}})
+                </span>
+                <span ng-if="!result.direction">
+                    -
+                </span>
+                
+            </td>
+            <td>
+                
+                <span ng-if="result.direction">
+                    ({{result.endCol + 1}}), ({{result.endRow + 1}})
+                </span>
+                <span ng-if="!result.direction">
+                    -
+                </span>                
+            </td>
+        </tr>
+    </tbody>
+</table>
